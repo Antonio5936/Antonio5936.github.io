@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Xinxiong Wu</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 15px;
+      color: #333;
+      background: #fff;
+      line-height: 1.75;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.75rem 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #555;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: #6390c9; }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    /* ── ABOUT ── */
+    #about {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid #eee;
+      flex-wrap: wrap;
+    }
+    #about img {
+      width: 148px;
+      height: 148px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: #dce8f7;
+    }
+    .profile-info h1 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .profile-info .affil {
+      color: #666;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .profile-info p {
+      margin-bottom: 0.7rem;
+      color: #444;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.8rem;
+    }
+    .links a {
+      display: inline-block;
+      padding: 0.22rem 0.8rem;
+      border: 1px solid #6390c9;
+      border-radius: 4px;
+      color: #6390c9;
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    .links a:hover { background: #6390c9; color: #fff; }
+
+    /* ── SECTIONS ── */
+    section {
+      padding: 2.2rem 0;
+      border-bottom: 1px solid #eee;
+    }
+    section:last-of-type { border-bottom: none; }
+    section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 1.2rem;
+      padding-left: 0.65rem;
+      border-left: 4px solid #6390c9;
+    }
+
+    /* ── SKILLS ── */
+    .skill-group {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.7rem;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+    .skill-label {
+      font-weight: 600;
+      color: #444;
+      min-width: 130px;
+      font-size: 0.9rem;
+    }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .tag {
+      background: #f0f5fb;
+      color: #4a72a8;
+      border-radius: 4px;
+      padding: 0.1rem 0.6rem;
+      font-size: 0.84rem;
+    }
+
+    /* ── COURSES ── */
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.4rem 1.5rem;
+      list-style: none;
+    }
+    .course-grid li::before {
+      content: "·  ";
+      color: #6390c9;
+    }
+    .course-grid li { font-size: 0.9rem; color: #444; }
+
+    /* ── EDUCATION ── */
+    .edu-list { list-style: none; }
+    .edu-item {
+      display: flex;
+      gap: 1.2rem;
+      padding: 0.55rem 0;
+      border-bottom: 1px dotted #ddd;
+      flex-wrap: wrap;
+    }
+    .edu-item:last-child { border-bottom: none; }
+    .edu-date { color: #888; font-size: 0.87rem; min-width: 155px; }
+    .edu-desc { flex: 1; font-size: 0.93rem; }
+
+    /* ── MISCS ── */
+    .misc-list { list-style: disc; padding-left: 1.4rem; }
+    .misc-list li { margin-bottom: 0.45rem; font-size: 0.92rem; color: #444; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.8rem;
+      color: #bbb;
+    }
+
+    @media (max-width: 600px) {
+      #about { flex-direction: column; align-items: center; text-align: center; }
+      .links { justify-content: center; }
+      .skill-group { flex-direction: column; gap: 0.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#about">About Me</a>
+  <a href="#skills">Skills</a>
+  <a href="#courses">Courses</a>
+  <a href="#education">Education</a>
+  <a href="#miscs">Miscs</a>
+</nav>
+
+<div class="container">
+
+  <!-- ABOUT -->
+  <div id="about">
+    <img src="images/profile.png" alt="Xinxiong Wu" />
+    <div class="profile-info">
+      <h1>Xinxiong Wu</h1>
+      <p class="affil">Student · Peking University</p>
+      <p>Beijing, China</p>
+      <div class="links">
+        <a href="mailto:xinxiong@stu.pku.edu.cn">Email</a>
+        <a href="https://github.com/Antonio5936" target="_blank">GitHub</a>
+        <a href="/cv/">CV</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skill-group">
+      <span class="skill-label">Programming</span>
+      <div class="skill-tags">
+        <span class="tag">Python</span>
+        <span class="tag">C++</span>
+        <span class="tag">MATLAB</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <span class="skill-label">ML / DL</span>
+      <div class="skill-tags">
+        <span class="tag">PyTorch</span>
+        <span class="tag">JAX</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">Hugging Face</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <span class="skill-label">Tools</span>
+      <div class="skill-tags">
+        <span class="tag">Git</span>
+        <span class="tag">LaTeX</span>
+        <span class="tag">Linux</span>
+        <span class="tag">SLURM</span>
+        <span class="tag">Docker</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section id="courses">
+    <h2>Relevant Coursework</h2>
+    <ul class="course-grid">
+      <li>Mathematical Analysis</li>
+      <li>Abstract Algebra</li>
+      <li>Real Analysis</li>
+      <li>Probability Theory</li>
+      <li>Machine Learning</li>
+      <li>Deep Learning</li>
+      <li>Algorithms &amp; Data Structures</li>
+      <li>Numerical Methods</li>
+    </ul>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Education</h2>
+    <ul class="edu-list">
+      <li class="edu-item">
+        <span class="edu-date">2024 – present</span>
+        <span class="edu-desc">Student, Peking University, Beijing</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- MISCS -->
+  <section id="miscs">
+    <h2>Miscs</h2>
+    <ul class="misc-list">
+      <li>Feel free to reach me at <a href="mailto:xinxiong@stu.pku.edu.cn" style="color:#6390c9;">xinxiong@stu.pku.edu.cn</a>.</li>
+    </ul>
+  </section>
+
+</div>
+
+<footer>
+  Xinxiong Wu &nbsp;·&nbsp; Peking University
+</footer>
+
+</body>
+</html>
