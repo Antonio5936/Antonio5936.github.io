@@ -5,32 +5,26 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+## Working Papers
 
+Papers in preparation. See [About](/about/) for project descriptions.
 
+- **SkewBraceSearch: Machine Learning for Simple Skew Brace Discovery** *(in preparation)*
+  Xinxiong Wu.
+  ML-guided enumeration and structural discovery of simple skew braces over non-abelian simple groups.
 
+- **Selective Plasticity for Continual Learning** *(in preparation)*
+  Xinxiong Wu.
+  A transformer architecture with reducibility-gap-triggered write-gating for class-incremental learning without catastrophic forgetting.
+
+- **Reward Hacking in Integrable Systems** *(in preparation)*
+  Xinxiong Wu.
+  Characterization of five forms of reward hacking in RL agents on integrable dynamical systems.
+
+---
+
+{% for post in site.publications reversed %}
+  {% include archive-single.html %}
+{% endfor %}

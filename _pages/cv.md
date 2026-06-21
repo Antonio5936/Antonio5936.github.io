@@ -9,56 +9,39 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+## Education
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+**Peking University**, Beijing, China
+- Student (current)
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+---
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+## Research Projects
 
-Publications
-======
+**SkewBraceSearch** — ML-guided enumeration of simple skew braces over non-abelian simple groups. Confirms multiplicity-2 structural conjecture across A<sub>5</sub>, PSL(2,7), A<sub>6</sub>, PSL(2,8), PSL(2,11), A<sub>7</sub>, PSL(2,17), PSL(2,23) with zero counterexamples.
+
+**Brainformer** — Continual learning architecture using selective write-gating triggered by a reducibility-gap signal. Evaluated on CIFAR-100 class-incremental learning and Continual-MQAR benchmark.
+
+**IntegrableExplorer** — Characterization of five forms of reward hacking in RL agents on integrable dynamical systems.
+
+---
+
+## Skills
+
+**Languages:** Python, C++, LaTeX
+
+**ML / DL:** PyTorch, JAX, Hugging Face Transformers
+
+**Mathematics:** Group theory, algebraic combinatorics, dynamical systems
+
+**Tools:** Git, SLURM, Docker, Jupyter
+
+---
+
+## Publications
+
+*Papers in preparation.*
+
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
